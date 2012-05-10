@@ -16,7 +16,6 @@ HEADER_LEN = len(SONG_LIST) + len(unicode(MAX_FILE_SIZE)) + 2 # +2 for the ;'s
 HEADER_SEP = ";"
 
 
-
 # creates a socket for TCP and make reusable
 def create_socket():
 
