@@ -29,8 +29,11 @@ def create_socket():
 def close_socket(sock):
 	sock.close()
 	return
-	
-	
+	f
+	bitch
+	f
+	f
+	f
 #
 def make_header_string(num):	
 	
