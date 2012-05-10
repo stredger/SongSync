@@ -30,9 +30,9 @@ def close_file( file_h ):
 	#	exit(EXIT_FAIL)
 	
 	return
-
-
-
+	
+	
+	
 # Traverses an iTunes library XML file getting songs and their
 #	locations in the file system. If we find missing song names
 #	or locations we print them to stdout.
