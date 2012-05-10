@@ -21,6 +21,7 @@ def open_file(path):
 	return f_handle
 
 
+
 # Pass in a file handle for closing
 def close_file( file_h ):
 	#try:
