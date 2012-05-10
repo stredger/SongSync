@@ -30,6 +30,7 @@ def close_socket(sock):
 	sock.close()
 	return
 	
+	modif
 	
 #
 def make_header_string(num):	
