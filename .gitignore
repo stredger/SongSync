@@ -1,0 +1,6 @@
+
+# compiled python guys
+*.pyc
+
+# Mac index file
+.DS_Store*
