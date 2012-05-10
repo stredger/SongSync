@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Major Version</key><integer>1</integer>
+	<key>Minor Version</key><integer>1</integer>
+	<key>Date</key><date>2012-05-05T21:01:44Z</date>
+	<key>Application Version</key><string>10.6.1</string>
+	<key>Features</key><integer>5</integer>
+	<key>Music Folder</key><string>file://localhost/Users/stredger/Music/iTunes/iTunes%20Media/</string>
+	<key>Library Persistent ID</key><string>9D3926D671175D35</string>
+	<key>Tracks</key>
+	<dict>
+		<key>2048</key>
+		<dict>
+			<key>Track ID</key><integer>2048</integer>
+			<key>Name</key><string>The Rhythm Of The War Drums</string>
+			<key>Artist</key><string>Eefe</string>
+			<key>Composer</key><string>Stephen Tredger</string>
+			<key>Album</key><string>Unified Anomalies</string>
+			<key>Genre</key><string>Industrial</string>
+			<key>Kind</key><string>AAC audio file</string>
+			<key>Size</key><integer>991831</integer>
+			<key>Total Time</key><integer>47251</integer>
+			<key>Date Modified</key><date>2012-01-07T00:35:05Z</date>
+			<key>Date Added</key><date>2006-09-11T00:12:20Z</date>
+			<key>Bit Rate</key><integer>128</integer>
+			<key>Sample Rate</key><integer>44100</integer>
+			<key>Play Count</key><integer>22</integer>
+			<key>Play Date</key><integer>3339945649</integer>
+			<key>Play Date UTC</key><date>2009-11-02T01:40:49Z</date>
+			<key>Skip Count</key><integer>1</integer>
+			<key>Skip Date</key><date>2008-03-19T18:37:53Z</date>
+			<key>Artwork Count</key><integer>1</integer>
+			<key>Sort Name</key><string>Rhythm Of The War Drums</string>
+			<key>Persistent ID</key><string>C3E5E7250929E394</string>
+			<key>Track Type</key><string>File</string>
+			<key>File Type</key><integer>1295270176</integer>
+			<key>Location</key><string>file://localhost/Users/stredger/Music/iTunes/iTunes%20Music/Eefe/Unified%20Anomalies/The%20Rhythm%20Of%20The%20War%20Drums.m4a</string>
+			<key>File Folder Count</key><integer>4</integer>
+			<key>Library Folder Count</key><integer>1</integer>
+		</dict>
+		<key>2050</key>
+		<dict>
+			<key>Track ID</key><integer>2050</integer>
+			<key>Name</key><string>Closed Eye Storm</string>
+			<key>Artist</key><string>Eefe</string>
+			<key>Composer</key><string>Stephen Tredger</string>
+			<key>Album</key><string>Unified Anomalies</string>
+			<key>Genre</key><string>Industrial</string>
+			<key>Kind</key><string>AAC audio file</string>
+			<key>Size</key><integer>8059805</integer>
+			<key>Total Time</key><integer>486000</integer>
+			<key>Date Modified</key><date>2012-01-07T00:35:04Z</date>
+			<key>Date Added</key><date>2006-09-15T21:13:26Z</date>
+			<key>Bit Rate</key><integer>128</integer>
+			<key>Sample Rate</key><integer>44100</integer>
+			<key>Play Count</key><integer>17</integer>
+			<key>Play Date</key><integer>3339944061</integer>
+			<key>Play Date UTC</key><date>2009-11-02T01:14:21Z</date>
+			<key>Artwork Count</key><integer>1</integer>
+			<key>Persistent ID</key><string>CCC545F1B758EC4E</string>
+			<key>Track Type</key><string>File</string>
+			<key>File Type</key><integer>1295270176</integer>
+			<key>Location</key><string>file://localhost/Users/stredger/Music/iTunes/iTunes%20Music/Eefe/Unified%20Anomalies/Closed%20Eye%20Storm.m4a</string>
+			<key>File Folder Count</key><integer>4</integer>
+			<key>Library Folder Count</key><integer>1</integer>
+		</dict>
+		<key>2052</key>
+		<dict>
+			<key>Track ID</key><integer>2052</integer>
+			<key>Name</key><string>Beast</string>
+			<key>Artist</key><string>Eefe</string>
+			<key>Composer</key><string>Stephen Tredger</string>
+			<key>Album</key><string>Unified Anomalies</string>
+			<key>Genre</key><string>Industrial</string>
+			<key>Kind</key><string>AAC audio file</string>
+			<key>Size</key><integer>3668208</integer>
+			<key>Total Time</key><integer>214250</integer>
+			<key>Date Modified</key><date>2012-01-07T00:35:04Z</date>
+			<key>Date Added</key><date>2006-09-25T18:55:36Z</date>
+			<key>Bit Rate</key><integer>128</integer>
+			<key>Sample Rate</key><integer>44100</integer>
+			<key>Play Count</key><integer>14</integer>
+			<key>Play Date</key><integer>3339943575</integer>
+			<key>Play Date UTC</key><date>2009-11-02T01:06:15Z</date>
+			<key>Artwork Count</key><integer>1</integer>
+			<key>Persistent ID</key><string>C59F84C67084B8F2</string>
+			<key>Track Type</key><string>File</string>
+			<key>File Type</key><integer>1295270176</integer>
+			<key>Location</key><string>file://localhost/Users/stredger/Music/iTunes/iTunes%20Music/Eefe/Unified%20Anomalies/Beast.m4a</string>
+			<key>File Folder Count</key><integer>4</integer>
+			<key>Library Folder Count</key><integer>1</integer>
+		</dict>
+		<key>2054</key>
+		<dict>
+			<key>Track ID</key><integer>2054</integer>
+			<key>Name</key><string>Last Iron Breath</string>
+			<key>Artist</key><string>Eefe</string>
+			<key>Composer</key><string>Stephen Tredger</string>
+			<key>Album</key><string>Unified Anomalies</string>
+			<key>Genre</key><string>Industrial</string>
+			<key>Kind</key><string>AAC audio file</string>
+			<key>Size</key><integer>4726705</integer>
+			<key>Total Time</key><integer>284000</integer>
+			<key>Date Modified</key><date>2012-01-07T00:35:05Z</date>
+			<key>Date Added</key><date>2006-09-26T04:02:43Z</date>
+			<key>Bit Rate</key><integer>128</integer>
+			<key>Sample Rate</key><integer>44100</integer>
+			<key>Play Count</key><integer>7</integer>
+			<key>Play Date</key><integer>3339945275</integer>
+			<key>Play Date UTC</key><date>2009-11-02T01:34:35Z</date>
+			<key>Artwork Count</key><integer>1</integer>
+			<key>Persistent ID</key><string>198BAD914E98D263</string>
+			<key>Track Type</key><string>File</string>
+			<key>File Type</key><integer>1295270176</integer>
+			<key>Location</key><string>file://localhost/Users/stredger/Music/iTunes/iTunes%20Music/Eefe/Unified%20Anomalies/Last%20Iron%20Breath.m4a</string>
+			<key>File Folder Count</key><integer>4</integer>
+			<key>Library Folder Count</key><integer>1</integer>
+		</dict>
+		<key>2056</key>
+		<dict>
+			<key>Track ID</key><integer>2056</integer>
+			<key>Name</key><string>Scream</string>
+			<key>Artist</key><string>Eefe</string>
+			<key>Composer</key><string>Stephen Tredger</string>
+			<key>Album</key><string>Unified Anomalies</string>
+			<key>Genre</key><string>Industrial</string>
+			<key>Kind</key><string>AAC audio file</string>
+			<key>Size</key><integer>6802751</integer>
+			<key>Total Time</key><integer>416000</integer>
+			<key>Date Modified</key><date>2012-01-07T00:35:05Z</date>
+			<key>Date Added</key><date>2006-09-27T00:07:45Z</date>
+			<key>Bit Rate</key><integer>128</integer>
+			<key>Sample Rate</key><integer>44100</integer>
+			<key>Play Count</key><integer>11</integer>
+			<key>Play Date</key><integer>3297184596</integer>
+			<key>Play Date UTC</key><date>2008-06-25T03:36:36Z</date>
+			<key>Artwork Count</key><integer>1</integer>
+			<key>Persistent ID</key><string>CE77106D300EFC5F</string>
+			<key>Track Type</key><string>File</string>
+			<key>File Type</key><integer>1295270176</integer>
+			<key>Location</key><string>file://localhost/Users/stredger/Music/iTunes/iTunes%20Music/Eefe/Unified%20Anomalies/Scream.m4a</string>
+			<key>File Folder Count</key><integer>4</integer>
+			<key>Library Folder Count</key><integer>1</integer>
+		</dict>
+	</dict>
+</dict>
+</plist>
