@@ -21,7 +21,6 @@ def open_file(path):
 	return f_handle
 
 
-
 # Pass in a file handle for closing
 def close_file( file_h ):
 	#try:
@@ -31,7 +30,6 @@ def close_file( file_h ):
 	#	exit(EXIT_FAIL)
 	
 	return
-	
 	
 	
 # Traverses an iTunes library XML file getting songs and their
