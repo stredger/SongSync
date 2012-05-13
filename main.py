@@ -1,9 +1,11 @@
+# -*- coding: utf-8 -*-
 
 # main.py
 
 import sys
 import os
 import pickle
+import threading
 
 from network import * 
 from readxml import * 
@@ -12,8 +14,91 @@ from readxml import *
 # the usage string to print when used improperly
 USAGE = "SongSync\nTransfers over songs missing on the\
  client from the server!\n Usage: [--client (-c) | --server (-s)]\n"
+ 
+ 
+
+TEST_CLI_FILE = "test/cli.xml"
+TEST_SERV_FILE = "test/serv.xml"
+EMPTY_XML = "test/empty.xml"
+XML_FILE = "/Users/stredger/Music/iTunes/iTunes Music Library.xml"
+ 
+RECV_DIR = "new-songs/"
+
+XML_CONSTS = {	'file://localhost':'',\
+				'%20'	:	' ',\
+				'%5D'	:	']',\
+				'%5B'	:	'[',\
+				'&#38;'	:	'&',\
+				'%23'	:	'#',\
+				'a%CC%88':	'ä',\
+				'%C3%98':	'Ø',\
+				'e%CC%81':	'é',\
+				'a%CC%8A':	'å',\
+				'u%CC%88':	'ü',\
+				'o%CC%88':	'ö',\
+				'%E2%80%A0':'†',\
+				'%25'	:	'%',\
+				'%C3%86':	'Æ',\
+				'%C2%B0':	'°',\
+				'%E2%82%AC':'€',\
+				'e%CC%80':	'è',\
+				'%3B'	:	';',\
+				'%E2%99%A0':'♠',\
+				'a%CC%80':	'à',\
+				'n%CC%83':	'ñ'
+			} 
 
 MAX_THREADS = 8
+
+
+def send_song(song, path, sock):
+
+	for symbol, char in XML_CONSTS.iteritems():
+	#	print "replacing", symbol, "with", char
+		path = path.replace(symbol, char)
+		
+	print "Opening", path, "Size :", os.path.getsize(path)
+	song_file = open_binary_file(path)
+	song_bytes = song_file.read()
+	close_file(song_file)
+	
+	#print "song length (bytes)", len(song_bytes)
+	
+	song_name = song + "." + path.split('.')[-1]
+	song_dat = (song_name, len(song_bytes))
+	
+	song_msg = create_message(SONG_FILE, song_dat)
+		
+	sock.send(song_msg)
+	sock.send(song_bytes)
+	
+	print "Sent song", song
+	
+	return
+	
+	
+	
+def recv_song(sock):
+
+	msg_type, msg_len = recv_msg_header(sock)
+	if SONG_FILE not in msg_type:
+		print "Expecting song!"
+		exit(1)
+			
+	song_head = pickle.loads(recv_data_chunk(sock, msg_len))
+	song = song_head[0]
+	song_len = song_head[1]
+	print "receiving", song, "length:", song_len
+	
+	song_bytes = recv_data_size(sock, song_len)
+	
+	file = open(RECV_DIR + song, "w")
+	file.write(song_bytes)
+	close_file(file)
+	
+	print "wrote file", song
+	
+	return
 
 
 def client():
@@ -24,14 +109,14 @@ def client():
 	#print "Connected to", socket.gethostbyname(socket.gethostname())
 	
 	# get string representation of song dict
-	xmlfile = open_file(TEST_CLI_FILE)	
+	#xmlfile = open_file(TEST_CLI_FILE)
+	xmlfile = open_file(EMPTY_XML)
 	songs = get_songs(xmlfile)
 	close_file(xmlfile)	
 	print "Read in client songs"
 	
 	#song_list_bytes = sys.getsizeof(song_data)
 	message = create_message(SONG_LIST, songs)
-	
 	sock.send(message)
 	print "Sent client song list"
 	
@@ -43,7 +128,12 @@ def client():
 	
 	print "Missing", num_missing, "songs"
 	
+	if not (os.path.isdir(RECV_DIR)):
+		os.makedirs(RECV_DIR)
+
 	# create some threads to make connections and get songs
+	for i in range(num_missing):
+		recv_song(sock)
 	
 	close_socket(sock)
 
@@ -71,7 +161,8 @@ def server():
 	print "Recieved client song list"
 	
 	# read in my songs
-	xmlfile = open_file(TEST_SERV_FILE)
+	#xmlfile = open_file(TEST_SERV_FILE)
+	xmlfile = open_file(XML_FILE)	
 	serv_songs = get_songs(xmlfile)
 	close_file(xmlfile)
 	print "Read in server songs"
@@ -86,10 +177,9 @@ def server():
 	print "Sent missing song data"
 		
 	# create threads to send songs
-	
-	# send songs
-	
-	#os.path.getsize("/path/isa_005.mp3")
+	for song in missing_songs:
+		send_song(song, missing_songs[song], data_sock);
+		
 	
 	close_socket(listen_sock)
 	close_socket(data_sock)

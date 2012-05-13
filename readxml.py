@@ -5,10 +5,6 @@ import os
 
 EXIT_FAIL = 1
 
-TEST_CLI_FILE = "test/cli.xml"
-TEST_SERV_FILE = "test/serv.xml"
-XML_FILE = "/Users/stredger/Music/iTunes/iTunes Music Library.xml"
-
 def open_file(path):
 	
 	#try:
@@ -20,6 +16,16 @@ def open_file(path):
 
 	return f_handle
 
+def open_binary_file(path):
+	
+	#try:
+	f_handle = open(path, 'rb')
+		
+	#except IOError as (strerror):
+	#	print "IOError: {1}".format(strerror)
+	#	exit(EXIT_FAIL)
+
+	return f_handle
 
 # Pass in a file handle for closing
 def close_file( file_h ):
@@ -109,28 +115,3 @@ def compute_missing_songs(serv_songs, cli_songs):
 			missing_songs[song] = serv_songs[song]
 	
 	return missing_songs
-
-
-"""
-def main():
-
-	#cli_xml = open_file(XML_FILE)
-
-	cli_xml = open_file(TEST_CLI_FILE)
-	serv_xml = open_file(TEST_SERV_FILE)
-	
-	cli_song_list = get_songs(cli_xml)
-	serv_song_list = get_songs(serv_xml)
-		
-	missing_songs = compute_missing_songs(serv_song_list, cli_song_list)
-	
-		
-	close_file(cli_xml)
-	close_file(serv_xml)
-
-	return
-
-
-if __name__ == "__main__":
-    main()
-"""

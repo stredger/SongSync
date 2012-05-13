@@ -2,5 +2,8 @@
 # compiled python guys
 *.pyc
 
+# stuff in new-songs dir
+new-songs/*
+
 # Mac index file
 .DS_Store*

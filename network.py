@@ -47,10 +47,11 @@ def make_header_string(num):
 	
 #
 def create_message(msg_type, data):
-
+	
 	raw_data = pickle.dumps(data)
 	msg_len = make_header_string(len(raw_data))
 	msg = msg_type + HEADER_SEP + msg_len + HEADER_SEP + raw_data
+	
 	#print msg
 	return msg
 
@@ -103,7 +104,8 @@ def recv_data(sock):
 			
 		sock.setblocking(1)	# there must be a better way of doing this...
 	except IOError:
-		None
+		pass
+		
 	return data
 
 
@@ -114,18 +116,18 @@ def recv_data_size(sock, num_bytes):
 	to_read = num_bytes if num_bytes < MAX_READ else MAX_READ
 	try:	
 		data = sock.recv(to_read)
-		num_bytes -= to_read
+		num_bytes -= len(data)
 
 		while (num_bytes > 0):
 			to_read = num_bytes if num_bytes < MAX_READ else MAX_READ
 			chunk = sock.recv(to_read)
-			if (chunk == ""):
-				break
+			#if (chunk == ""):
+			#	break
 			data += chunk
-			num_bytes -= to_read
+			num_bytes -= len(chunk)
 
 	except IOError:
-		None
+		pass
 		
 	return data
 
